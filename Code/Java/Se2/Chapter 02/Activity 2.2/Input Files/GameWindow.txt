@@ -1,0 +1,64 @@
+
+package localize;
+
+import java.awt.Font;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class GameWindow {
+    JFrame f;
+    JPanel p;
+    JLabel l;
+    JButton b1,b2,b3;
+    
+    Locale currentLocale;
+    ResourceBundle messages ;
+    
+    GameWindow(){
+        this("English");
+    }
+    GameWindow(String language){
+        
+        if(language.equals("English")){
+            setEnglish();
+            createFrame();
+        }
+        else if(language.equals("French")){
+            setFrench();
+            createFrame();
+        }
+        
+       
+    }
+    
+    public void setEnglish(){
+        
+        //English Language
+        
+    }
+    public void setFrench(){
+         //French Language
+    }
+    public void createFrame(){
+         f = new JFrame();
+        p = new JPanel();
+        l = new JLabel("Puzzle");
+        l.setFont(new Font("Serif", Font.PLAIN, 24));
+        
+//Language Conversion
+
+        l.setFont(new Font("Serif", Font.PLAIN, 36));
+        f.add(p);
+            f.setVisible(true);
+            f.setSize(200, 200);
+            p.add(l);
+            p.add(b1);
+            p.add(b2);
+            p.add(b3);
+    }
+}

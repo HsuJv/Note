@@ -1,0 +1,15 @@
+
+package messenger;
+
+//Import Package
+
+class MessageProcessor//Type Parameter
+{ 
+	//Generic Variable
+	
+	//Generic Constructor
+	
+	//Processing Logic   
+  
+}
+    

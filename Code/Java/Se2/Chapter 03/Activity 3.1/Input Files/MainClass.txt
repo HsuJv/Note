@@ -1,0 +1,42 @@
+package messenger;
+
+import java.util.Scanner;
+
+public class MainClass 
+{
+    public void showMenu() 
+    {
+        int option;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("---------Menu---------");
+        System.out.println("1. SMS");
+        System.out.println("2. Email");
+        System.out.println("3. Exit");
+        System.out.print("\nChoose the option (1/2/3): ");
+
+        option = sc.nextInt();
+
+        switch (option) 
+        {
+            case 1: getSMSDetails();
+                    break;
+            case 2: getEmailDetails();
+                    break;
+            case 3: System.exit(0);
+                    break;
+            default: showMenu();
+                    break;
+        }
+    }
+    
+    //SMS Method
+    
+    //Email Method
+      
+    public static void main(String[] args) 
+    {
+        MainClass mc = new MainClass();
+        mc.showMenu();
+    }
+}

@@ -1,0 +1,21 @@
+20
+aunt
+barber
+best friend
+boyfriend
+brother
+cat
+cousin
+dentist
+dog
+ex-boyfriend
+ex-girlfriend
+fiance
+girlfriend
+mailman
+neighbor
+professor
+psychiatrist
+roomate
+sister
+uncle
