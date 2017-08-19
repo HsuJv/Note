@@ -72,8 +72,6 @@ newInt9:
     push    bx
     push    es
 
-    in      al, 60h
-
     pushf
     pushf
     pop     bx
@@ -82,6 +80,7 @@ newInt9:
     popf
     call    dword ptr   ds:[0]
 
+    in      al, 60h
     cmp     al, 1
     jne     newInt9re
 

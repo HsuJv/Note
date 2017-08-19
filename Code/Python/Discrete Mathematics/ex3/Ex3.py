@@ -17,7 +17,7 @@ def validInput(a):
 
 def main():
     while 1:
-        n = input("请输入一个自然数：")
+        n = input("请输入一个自然数: ")
         if (validInput(n)):
             n = int(n)
             break
@@ -26,7 +26,7 @@ def main():
     for i in range(1, n + 1):
         if (n % i == 0):
             a.append(i)
-    print("由{0}的整除关系构成的格的盖住为：".format(n))
+    print("由{0}的整除关系构成的格的盖住为: ".format(n))
     for i in a:
         for j in a:
             if (not i == j and j % i == 0):

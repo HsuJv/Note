@@ -106,11 +106,11 @@ private:
 	}
 
 	int Select(int k, int left, int right, int r){ 
-		//每个分组r个元素，寻找第k小元素
+		//每个分组r个元素, 寻找第k小元素
 		int n = right - left + 1;
-		if (n <= r){ //若问题足够小，使用直接插入排序
+		if (n <= r){ //若问题足够小, 使用直接插入排序
 			InsertSort(left, right);
-			return left + k - 1; //取其中的第k小元素，其下标为left+k-1
+			return left + k - 1; //取其中的第k小元素, 其下标为left+k-1
 		}
 		for (int i = 1; i <= n / r; i++){
 			InsertSort(left + (i-1) * r, left + i * r - 1);
@@ -119,8 +119,8 @@ private:
 		//将每组的中间值交换到子表前部集中存放
 		}
 		int j = Select((int)ceil((double)n/r/2), left, left + (n/r) - 1, r);
-		//求二次中间值，其下标为j
-		Swap(left, j); //二次中间值为枢纽元，并换至left处
+		//求二次中间值, 其下标为j
+		Swap(left, j); //二次中间值为枢纽元, 并换至left处
 		j = Partition(left, right); //对表（子表）进行分划操作	
 		if (k == j - left + 1) return j; //返回第k小元素下标
 		else if (k < j - left + 1)

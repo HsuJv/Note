@@ -6,11 +6,11 @@ start:
 s:
     nop
     nop
-    mov di, offset s
-    mov si, offset s2
-    mov ax, cs:[si]
-    mov cs:[di], ax     ;把s2中的jmp short s1复制到s的第一条语句
-                        ;但是偏移量是offset s1 - offset s2
+    mov     di, offset s
+    mov     si, offset s2
+    mov     ax, cs:[si]
+    mov     cs:[di], ax     ;把s2中的jmp short s1复制到s的第一条语句
+                            ;但是偏移量是offset s1 - offset s2
 
 s0:
     jmp     short   s

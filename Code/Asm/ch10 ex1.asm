@@ -25,7 +25,7 @@ start:
     int     21h
 
 print:
-;在第dh行，dl列打印ds:si指向的字符串
+;在第dh行, dl列打印ds:si指向的字符串
 ;无返回值
     xor     ax, ax
     mov     al, dh
@@ -41,13 +41,12 @@ print:
     xor     cx, cx
 trans:      
     mov     cl, [si]
-    jcxz    re
     mov     al, [si]
     mov     es:[bx], ax
     add     bx, 2
     inc     si
+    inc     cx
     loop    trans
-re:
     ret
 
 

@@ -104,20 +104,20 @@ class graph(object):
 
 def main():
     while 1:
-        n = input("请输入一个正整数：")
+        n = input("请输入一个正整数: ")
         if (validInput(n)):
             n = int(n)
             break
     G = getRandomGraph(n)
     g = graph(G)
-    print("随机生成的图的邻接矩阵为：")
+    print("随机生成的图的邻接矩阵为: ")
     g.showGraph()
     if not g.isConnected():
         print("该图不是连通图。")
     elif g.isEulerianGraph():
-        print("该图是欧拉图，其中一条欧拉回路为：", g.getEulerianPath())
+        print("该图是欧拉图, 其中一条欧拉回路为: ", g.getEulerianPath())
     elif g.isSemiEulerianGraph():
-        print("该图是半欧拉图，其中一条欧拉路为：", g.getEulerianPath())
+        print("该图是半欧拉图, 其中一条欧拉路为: ", g.getEulerianPath())
     else:
         print("该图既不是欧拉图也不是半欧拉图")
 

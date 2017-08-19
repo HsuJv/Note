@@ -50,8 +50,8 @@ public:
 		delete []w;
 	}
 
-	void surBacktrack(int i){//迭代找到最接近第一艘轮船载重c1的最佳装载方案，
-						//最优载重值bestw，最优解数组bestx。
+	void surBacktrack(int i){//迭代找到最接近第一艘轮船载重c1的最佳装载方案, 
+						//最优载重值bestw, 最优解数组bestx。
 		while (1) {
 			while (i<=n && cw+w[i]<=c1){
 				r -= w[i];
@@ -83,8 +83,8 @@ public:
 		}
 	}
 
-	void Backtrack(int i){//找到最接近第一艘轮船载重c1的最佳装载方案，
-						//最优载重值bestw，最优解数组bestx。
+	void Backtrack(int i){//找到最接近第一艘轮船载重c1的最佳装载方案, 
+						//最优载重值bestw, 最优解数组bestx。
 		if (i > n){//到达叶节点
 			if (cw > bestw){
 				for (int j = 1; j <= n; j++) bestx[j] = x[j];
@@ -101,7 +101,7 @@ public:
 			Backtrack(i + 1);
 			cw -= w[i];
 		}
-		if (cw+r > bestw){ //x[i]=0时增加的约束函数，剪去不含最优解的分枝
+		if (cw+r > bestw){ //x[i]=0时增加的约束函数, 剪去不含最优解的分枝
 			//搜索右子树
 			x[i] = 0;
 			Backtrack(i + 1);

@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-int Prime(int n); /*判断一个整数是否为质数，是返回1否返回0*/
+int Prime(int n); /*判断一个整数是否为质数, 是返回1否返回0*/
 double fun(int n);
 int main(){
 int n;

@@ -4,18 +4,18 @@ r = []  # 关系
 
 def init():
     global a, r
-    A = input("输入关系的域中包含的元素，以空格隔开：")
+    A = input("输入关系的域中包含的元素, 以空格隔开: ")
     a = A.split()
-    print("每行输入两个元素x y，表示关系xRy，以'#'终止")
+    print("每行输入两个元素x y, 表示关系xRy, 以'#'终止")
     R = input()
     while('#' not in R):
         if (len(R.split()) != 2):
-            print("输入元素个数不正确，请重输：")
+            print("输入元素个数不正确, 请重输: ")
             R = input()
             continue
         x, y = R.split()
         if (x not in a or y not in a):
-            print("输入的元素不在集合A中，请重输：")
+            print("输入的元素不在集合A中, 请重输: ")
             R = input()
             continue
         r.append([x, y])

@@ -8,10 +8,10 @@ codesg segment
 start:
     mov     ax, datasg
     mov     ds, ax
-    mov     ax, 0b872h
+    mov     ax, 0b800h
     mov     es, ax
     mov     si, 0
-    mov     di, 72       ;列偏移量
+    mov     di, 160*12+40*2       ; 偏移量
     mov     cx, 16
 s:
     mov     ax, 0ca00h
