@@ -1,18 +1,16 @@
 assume cs:codesg
 codesg segment
 start:
-        mov    ax, 0
-        mov    cx, 8
-loop1:
-        push   cx
-        mov    cx, 5
-loop2:
-        inc    ax
-        loop   loop2
-        pop    cx
-        loop   loop1
-
-        mov    ax, 4c00h
-        int    21h
+        mov     ah, 75
+        mov     bh, -6
+        add     ah, bh
+        mov     ah, -35
+        mov     bh, -75
+        add     ah, bh
+        mov     ah, 120
+        mov     bh, 18
+        add     ah, bh
+        mov     ax, 4c00h
+        int     21h
 codesg ends 
 end start
