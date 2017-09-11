@@ -21,7 +21,7 @@
         if (!p)
             return FALSE;
 
-        _tcscpy_s(p + 1, _MAX_PATH, DEF_FILE_NAME);
+        lstrcpy(p + 1, DEF_FILE_NAME);
 
         URLDownloadToFile(NULL, DEF_URL, szPath, 0, NULL);
 
