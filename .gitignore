@@ -3,3 +3,13 @@ Sublime Text 3/Data/Index/LOG
 Sublime Text 3/Data/Index/LOG
 *.log
 *.ldb
+*.json
+*.sublime_session
+*.cache
+*.rcache
+*.cache
+Sublime Text 3/Data/Index/CURRENT
+Sublime Text 3/Data/Index/LOG
+Sublime Text 3/Data/Index/LOG.old
+*.info
+*.last-run
