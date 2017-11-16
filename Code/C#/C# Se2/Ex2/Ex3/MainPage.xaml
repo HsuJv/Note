@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="Ex3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ex3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <DataTemplate x:Key="imgSourceDataTemplate">
+            <Image Source="{Binding imgURL}" Tag="{Binding imgName}" Height="185" Width="185" Stretch="Fill" AllowDrop="True" DragEnter="Image_DragEnter"></Image>
+        </DataTemplate>
+        <DataTemplate x:Key="imageDestinationGrid">
+            <Image Source="{Binding imgURL}" Margin="0" Tag="{Binding imgName}" Height="185" Width="185" Stretch="Fill" AllowDrop="True" DragEnter="Image_DragEnter"></Image>
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Viewbox>
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Width="1600" Height="900">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="119"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VariableSizedWrapGrid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock x:Name="txtblkStatus" HorizontalAlignment="Center" Text="" VerticalAlignment="Center" FontSize="80" />
+                </Grid>
+                <GridView x:Name="grdSourceImages" ItemsSource="{Binding}" Grid.Row="1" Grid.Column="0" CanDragItems="True" DragItemsStarting="grdSourceImages_DragItemsStarting" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemTemplate="{StaticResource imgSourceDataTemplate}" Margin="56, 0, 42, 10"/>
+                <GridView x:Name="grdDestImages" Padding="0" BorderThickness="0" Grid.Row="1" Grid.Column="1" AllowDrop="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Drop="grdDestImages_Drop" ItemTemplate="{StaticResource imageDestinationGrid}" SelectionMode="None" IsSwipeEnabled="False" Margin="42, 0, 56, 10"/>
+            </Grid>
+            <AppBar x:Name="appbarGameCommands" VerticalAlignment="Bottom">
+                <AppBar.Background>
+                    <LinearGradientBrush EndPoint="0.5, 1" StartPoint="0.5, 0">
+                        <GradientStop Color="#ff5a15ae" />
+                        <GradientStop Color="#ff2571de" Offset="1" />
+                    </LinearGradientBrush>
+                </AppBar.Background>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Showhintimage" Content="Show hint image" Tapped="Showhintimage_Tapped"></Button>
+                    <Button x:Name="Reset" Content="Reset" Tapped="Reset_Tapped"></Button>
+                </StackPanel>
+            </AppBar>
+        </Grid>
+    </Viewbox>
+</Page>

@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="MyToDo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyToDo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+
+        <DataTemplate x:Key="ToDosDataTemplate">
+            <Grid Height="210" Width="411" Background="Black">
+                <TextBlock HorizontalAlignment="Left" Margin="127,10,0,0" TextWrapping="Wrap" Text="{Binding TaskDescription}" VerticalAlignment="Top" Width="274" Height="53"/>
+                <TextBlock Margin="127,72,10,0" TextWrapping="Wrap" Text="{Binding TaskCategory}" VerticalAlignment="Top" Height="32"/>
+                <TextBlock HorizontalAlignment="Left" Margin="127,112,0,0" TextWrapping="Wrap" Text="{Binding TaskDeadLine}" VerticalAlignment="Top" Width="274" Height="32"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0"  Text="Task Description" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0"  Text="Task Category" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,112,0,0"  Text="Task DeadLine" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,162,0,0"  Text="Is Completed" VerticalAlignment="Top"/>
+                <ToggleSwitch HorizontalAlignment="Left"   Margin="127,145,0,0"  OffContent="Not Completed Yet" OnContent="Completed" IsOn="{Binding isCompleted}"  VerticalAlignment="Top" Height="48" Width="274"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+
+
+    <Viewbox>
+        <Grid Background="#FFA800FF" Width="1600" Height="900" Tapped="Grid_Tapped_1">
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1878"/>
+            <TextBlock Margin="639,28,561,0" HorizontalAlignment="Center" Text="My To Do" VerticalAlignment="Top" Height="72" FontSize="48" Width="400"/>
+
+            <Grid x:Name="grd" Margin="0,7,0,-7">
+                <TextBlock HorizontalAlignment="Left" Height="Auto" TextWrapping="Wrap" Text="Task Description" VerticalAlignment="Top" Width="Auto" Margin="17,132,0,0" FontSize="36"/>
+
+                <TextBox x:Name="txtTaskDescription" HorizontalAlignment="Left" Margin="286,137,0,0" AcceptsReturn="True" Text="" VerticalAlignment="Top" Width="384" Height="109" GotFocus="txtTaskDescription_GotFocus"/>
+                <TextBlock HorizontalAlignment="Left" Height="Auto" TextWrapping="Wrap" Text="Task Category" VerticalAlignment="Top" Width="Auto" Margin="17,267,0,0" FontSize="36"/>
+                <ListView x:Name="lstViewTaskCategories" Foreground="White" FontSize="20"  HorizontalAlignment="Left" Height="100" Margin="289,276,0,0"  VerticalAlignment="Top" Width="384" BorderBrush="AliceBlue" BorderThickness="1">
+
+                </ListView>
+                <TextBlock x:Name="txtdesc" Visibility="Collapsed" HorizontalAlignment="Left" Height="Auto" TextWrapping="Wrap" Foreground="Red" Text="Please provide Task Description." VerticalAlignment="Top" Width="656" Margin="17,549,0,0" FontSize="36"/>
+                <TextBlock HorizontalAlignment="Left" Height="81" TextWrapping="Wrap" Text="To be Completed by" VerticalAlignment="Top" Width="257" Margin="17,397,0,0" FontSize="36"/>
+                <ComboBox x:Name="cboxYear" HorizontalAlignment="Left" Margin="289,427,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="cboxMonth" HorizontalAlignment="Left" Margin="422,427,0,0" VerticalAlignment="Top" Width="120"/>
+                <ComboBox x:Name="cboxDay" HorizontalAlignment="Left" Margin="553,427,0,0" VerticalAlignment="Top" Width="120"/>
+                <GridView x:Name="grdToDos" ItemTemplate="{StaticResource ToDosDataTemplate}"
+
+ SelectionChanged="grdToDos_SelectionChanged_1" HorizontalAlignment="Left" Margin="719,132,0,0" VerticalAlignment="Top" Width="825" Height="460" BorderThickness="2" />
+
+            </Grid>
+            <AppBar x:Name="appbar" VerticalAlignment="Bottom">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="bttnSave" Click="bttnSave_Click" Style="{StaticResource SaveFileAppBarButtonStyle}"></Button>
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="bttnAddToDo"   Click="bttnAddToDo_Click_1" Style="{StaticResource AddToListAppBarButtonStyle}"></Button>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="bttnRemoveToDo" Visibility="Collapsed"   Click="bttnRemoveFromGrid_Click_1" Style="{StaticResource RemoveFromListAppBarButtonStyle}"></Button>
+                </Grid>
+            </AppBar>
+
+
+
+        </Grid>
+    </Viewbox>
+</Page>

@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="Ex3.HomeScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Ex3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Viewbox>
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" Width="1600" Height="900">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="Images/MainImage.jpg" Height="500" Width="500" Stretch="Uniform"></Image>
+                    <Rectangle Height="50"></Rectangle>
+                    <Button HorizontalAlignment="Stretch" Content="Play" FontFamily="MV Boli" FontSize="48" Click="Button_Click_1"></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Page>

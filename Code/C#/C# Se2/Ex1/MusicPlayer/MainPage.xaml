@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="MusicPlayer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPlayer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Viewbox>
+            <Grid x:Name="grdMusicPlayer" Background="Black">
+                <Button x:Name="button" Content="Playlist" HorizontalAlignment="Left" Margin="7, 55, 0, 0" VerticalAlignment="Top" Background="CadetBlue" 
+                        Width="360" Height="53" FontSize="24" BorderThickness="0"/>
+                <ListBox FontSize="22" x:Name="lstViewPlaylist" HorizontalAlignment="Left" Height="642" Margin="10, 105, 0, 0"
+                         VerticalAlignment="Top" Width="355" BorderBrush="Blue" BorderThickness="1" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                         ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="lstViewPlaylist_SelectionChanged"/>
+                <Grid HorizontalAlignment="Left" Height="454" Margin="391,58,0,0" VerticalAlignment="Top" Width="948">
+                    <Border BorderBrush="White" BorderThickness="3">
+                        <MediaElement x:Name="mediaSource" AutoPlay="False" Height="Auto" Width="Auto" Margin="0,4,0,-4"/>
+                    </Border>
+                </Grid>
+                <Button x:Name="bttnPlay" Margin="807, 662, 0, 21" Visibility="Visible" Content="&#xE102;" FontFamily="Segoe UI Symbol" Click="bttnPlay_Click"></Button>
+                <Button x:Name="bttnPause" Visibility="Collapsed" Margin="807, 662, 0, 21" Content="&#xE103;" FontFamily="Segoe UI Symbol" Click="bttnPause_Click"></Button>
+                <Button x:Name="bttnPrevious" Margin="696, 662, 0, 21" Content="&#xE112;" FontFamily="Segoe UI Symbol" Click="bttnPrevious_Click"></Button>
+                <Button x:Name="bttnNext" Margin="917, 662, 0, 21" Content="&#xE111;" FontFamily="Segoe UI Symbol" Click="bttnNext_Click"></Button>
+                <ToggleSwitch x:Name="tglSwitchMediaRepeat" Header="" HorizontalAlignment="Left" Margin="392, 678, 0, 0" VerticalAlignment="Top" OffContent="Repeat Off" OnContent="Repeat On" Toggled="tglSwtchMediaRepeat_Toggled"/>
+                <TextBlock x:Name="tglButtonVolume" Margin="1155, 681, 0, 0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Webdings" FontSize="34" Text="U" Height="39"/>
+                <Slider x:Name="sldrVolume" HorizontalAlignment="Left" Margin="1203, 678, 0, 0" VerticalAlignment="Top" Width="135" Height="44" LargeChange="10" Maximum="100" StepFrequency="1" SmallChange="5" Background="#FF4486E6" ValueChanged="sldrVolume_ValueChanged"></Slider>
+                <Slider x:Name="prgsBarSongPosition" HorizontalAlignment="Left" Height="51" Margin="391, 599, 0, 0" VerticalAlignment="Top" Width="948" Background="#FF4486E6" IsThumbToolTipEnabled="False" ValueChanged="prgsBarSongPosition_ValueChanged"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>
+
