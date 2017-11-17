@@ -19,3 +19,6 @@
 + DisAsm
     1. 《逆向工程核心原理》 李承远著
     1. 《》
+
++ Computer Science
+    1. Computer Systems A Programmer's perspective
