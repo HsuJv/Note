@@ -1,0 +1,12 @@
+<book>
+<Java_Programming>
+   <Quantity>10</Quantity>
+   <ExpectedDelivery>2nd Januray 2012</ExpectedDelivery>
+   <TotalCost>1000.00</TotalCost>
+</Java_Programming>
+<C_Programming>
+   <Quantity>13</Quantity>
+   <ExpectedDelivery>16th Januray 2012</ExpectedDelivery>
+   <TotalCost>5000.00</TotalCost>
+</C_Programming>
+</book>

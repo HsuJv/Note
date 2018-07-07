@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://pack/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pack/">
+
+<xs:element name="parseFile" type="tns:parseFile" />
+
+<xs:element name="parseFileResponse" type="tns:parseFileResponse" />
+
+<xs:complexType name="parseFile">
+<xs:sequence>
+<xs:element name="bookName" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="parseFileResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

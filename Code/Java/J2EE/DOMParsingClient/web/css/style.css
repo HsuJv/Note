@@ -1,0 +1,64 @@
+body{margin:0px; padding:0px; background:#000; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000;}
+
+#main-wraper{width:934px; margin:0 auto; padding:0px;}
+
+#top-wraper{width:934px; float:left;}
+
+#banner{width:814px; background:url(../images/header.jpg) top no-repeat; height:123px; float:left; padding:65px 0px 0px 120px; font-family: Georgia, "Times New Roman", Times, serif; font-size:30px; color:#fff;}
+
+#nav{width:934px; float:left; background:url(../images/nav-bg.jpg) top repeat-x; height:36px;}
+
+#nav ul{margin:0px; padding:0px; list-style-type:none; display: inline; float:left;}
+
+#nav ul li{float:left; line-height:36px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#fff; text-decoration:none; background:url(../images/nav-brd.jpg) top right no-repeat;}
+
+#nav ul li a{float:left; line-height:36px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#fff; text-decoration:none; padding:0px 54px  0px 53px;}
+
+#nav ul li a:hover{float:left; line-height:36px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#0aa5c2; text-decoration:none; padding:0px 54px 0px 53px; background:url(../images/nav-h.jpg) top repeat-x; }
+
+#mid-wraper{width:934px; margin:0 auto; padding:0px;}
+
+#mid-wraper-inner{width:934px; float:left; background:url(../images/mid-bg.jpg) repeat-y;}
+
+#left-wraper{width:296px; float:left;}
+
+#left-wraper-top{width:296px; background:#fef4e9 url(../images/left-mid.jpg) bottom no-repeat; padding:0px 0px 12px 0px; float:left;}
+
+#left-wraper-top ul{margin:0px; padding:0px; list-style-type:none; display:block; float:left;}
+
+#left-wraper-top ul li{width:296px; float:left; border-bottom:1px solid #fff; line-height:31px; padding:0px 0px;}
+
+#left-wraper-top ul li a{width:241px; float:left; line-height:31px; padding:0px 15px 0px 40px; background:#fdead5 url(../images/left-bullet.jpg) top left no-repeat;  text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000; background-position:25px 9px;}
+
+#left-wraper-top ul li a:hover{width:241px; float:left; line-height:31px; padding:0px 15px 0px 40px; background:#edaf7b url(../images/left-bullet-h.jpg) top left no-repeat; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#fff; background-position:25px 9px;}
+
+#news{width:270px; float:left; padding:15px 0px 10px 15px; color:#fff; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+
+h3{margin:0px; padding:0px; color:#fff; font-size:18px; font-weight:normal; font-family:Arial, Helvetica, sans-serif;}
+
+.link{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#fff; text-decoration:none; text-align:right;}
+
+.link:hover{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#fff; text-decoration:none; text-align:right;}
+
+.link2{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#bc4105; text-decoration:none; text-align:right;}
+
+.link2:hover{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#bc4105; text-decoration:none; text-align:right;}
+
+h1{font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#2f1a1a; margin:0px; padding:0px; text-align:left;}
+
+h2{font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#2f1a1a; margin:0px; padding:0px; text-align:left;}
+
+#right-wraper{width:596px; float:left; padding:15px 0px 0px 25px;}
+
+.right-part{width:596px; float:left;}
+
+.blue-text{font-size:15px; color:#0e7aa5;}
+
+#foter{width:934px; margin:0 auto; padding:0px; color:#999999; }
+
+#foter-inner{width:934px; float:left; padding:10px 0px;}
+
+.footer-link{color:#999999; text-decoration:none; padding:0px 5px;}
+
+.footer-link:hover{color:#999999; text-decoration:none; padding:0px 5px;}
+
