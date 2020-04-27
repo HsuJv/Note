@@ -1,0 +1,19 @@
+{
+  "email": [
+    "aaa@...",
+    "bbb@...",
+    "ccc@...",
+    "ddd@..."
+  ],
+  "users": [
+    "aaa",
+    "bbb",
+    "abc",
+    "cba"
+  ],
+  "file_root": "webroot",
+  "cgi_root": "webroot/cgi",
+  "server_ip": "0.0.0.0",
+  "server_port": "3323",
+  "proxy_server": "xxxxxxxxxxxxx"
+}
