@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="ClasstableTable.TeacherPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClasstableTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Viewbox>
+        <Grid x:Name="grd" Width="1600" Height="900">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Picture/bj2.png"/>
+            </Grid.Background>
+            <Grid HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="1600">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,63,0,0" TextWrapping="Wrap" Text="Welcome!" FontSize="50" Foreground="Red" TextAlignment="Center" VerticalAlignment="Top" Height="59" Width="1600"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="713" Margin="442,187,0,0" VerticalAlignment="Top" Width="681">
+                <Button x:Name="bttnViewWeek" Content="View week's class" FontSize="26" Background="CadetBlue" HorizontalAlignment="Left" Margin="206,86,0,0" VerticalAlignment="Top" Height="70" Width="276" Click="bttnViewWeek_Click"/>
+                <Button x:Name="bttnViewMonth" Content="View month's class" FontSize="26" Background="CadetBlue" HorizontalAlignment="Left" Margin="206,228,0,0" VerticalAlignment="Top" Height="70" Width="276" Click="bttnViewMonth_Click"/>
+            </Grid>
+            <AppBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF8243B6" >
+                <Button x:Name="bttnBack" Content="Back"  FontSize="30" Click="bttnBack_Click"/>
+
+            </AppBar>
+
+        </Grid>
+
+    </Viewbox>
+
+
+
+</Page>

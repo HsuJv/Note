@@ -1,0 +1,122 @@
+﻿<Page
+    x:Class="ClasstableTable.AddClass"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClasstableTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Viewbox>
+        <Grid x:Name="grd" Width="1600" Height="900">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Picture/bj2.png"/>
+            </Grid.Background>
+            <Grid HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="1600">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,63,0,0" TextWrapping="Wrap" Text="Now Add Your Course!" Foreground="Gold" FontSize="50" TextAlignment="Center" VerticalAlignment="Top" Height="59" Width="1600"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="713" Margin="341,192,0,0" VerticalAlignment="Top" Width="875">
+                <TextBlock x:Name="txtBlkCoursename" HorizontalAlignment="Left" Margin="141,0,0,0" TextWrapping="Wrap" Text="Course name:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="250"/>
+                <TextBlock x:Name="txtBlkTeachername" HorizontalAlignment="Left" Margin="141,67,0,0" TextWrapping="Wrap" Text="Teacher name:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="250"/>
+                <TextBlock x:Name="txtBlkClassroom" HorizontalAlignment="Left" Margin="141,137,0,0" TextWrapping="Wrap" Text="Classroom:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="250"/>
+                <TextBlock x:Name="txtBlkClasstime" HorizontalAlignment="Left" Margin="141,209,0,0" TextWrapping="Wrap" Text="Class time:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="250"/>
+                <TextBlock x:Name="txtBlkWeek" HorizontalAlignment="Left" Margin="141,284,0,0" TextWrapping="Wrap" Text="Week:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="113"/>
+                <TextBlock x:Name="txtBlkSingleordualweek" HorizontalAlignment="Left" Margin="141,448,0,0" TextWrapping="Wrap" Text="Single or dual week:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="269"/>
+                <TextBlock x:Name="txtBlkWeekTime" HorizontalAlignment="Left" Margin="141,362,0,0" TextWrapping="Wrap" Text="Week time:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="250"/>
+                <TextBlock x:Name="txtBlkStartweek" HorizontalAlignment="Left" Margin="332,284,0,0" TextWrapping="Wrap" Text="Start:"  FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="100"/>
+                <TextBlock x:Name="txtBlkEndweek" HorizontalAlignment="Left" Margin="595,284,0,0" TextWrapping="Wrap" Text="End:"  FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="50" Width="100"/>
+
+
+                <TextBox x:Name="txtBoxCoursename" HorizontalAlignment="Left" Margin="465,0,0,0" TextWrapping="Wrap" Text="" FontSize="30"  TextAlignment="Center" Foreground="black" VerticalAlignment="Top" Height="50" Width="351"/>
+                <TextBox x:Name="txtBoxTeachername" HorizontalAlignment="Left" Margin="465,67,0,0" TextWrapping="Wrap" Text="" FontSize="30"  TextAlignment="Center" Foreground="black" VerticalAlignment="Top" Height="50" Width="351"/>
+                <TextBox x:Name="txtBoxClassroom" HorizontalAlignment="Left" Margin="465,137,0,0" TextWrapping="Wrap" Text="" FontSize="30"  TextAlignment="Center" Foreground="black" VerticalAlignment="Top" Height="50" Width="351"/>
+                <ComboBox x:Name="comboBoxClassTime" FontSize="30" Foreground="black" HorizontalAlignment="Left" Margin="465,209,0,0" VerticalAlignment="Top" Width="351" Height="50">
+                    <ComboBoxItem FontSize="30" Foreground="black">First class(8:00-8:45)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Second class(8:50-9:35)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Third class(9:50-10:35)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Fourth class(10:40-11:25)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Fifth class(11:30-12:15)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Sixth class(13:45-14:30)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Seventh class(14:35-15:20)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Eighth class(15:35-16:20)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Nineth class(16:25-17:10)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Tenth class(18:30-19:25)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Eleventh class(19:30-20:25)</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Twelfth class(20:30-21:25)</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="comboBoxStartweek" HorizontalAlignment="Left" Margin="465,284,0,0"  FontSize="30" Foreground="black"  VerticalAlignment="Top" Height="50" Width="100">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="comboBoxEndweek" HorizontalAlignment="Left" Margin="716,284,0,0"  FontSize="30" Foreground="black" VerticalAlignment="Top" Height="50" Width="100">
+                    <ComboBoxItem>1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>11</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                    <ComboBoxItem>15</ComboBoxItem>
+                    <ComboBoxItem>16</ComboBoxItem>
+                    <ComboBoxItem>17</ComboBoxItem>
+                    <ComboBoxItem>18</ComboBoxItem>
+                    <ComboBoxItem>19</ComboBoxItem>
+                    <ComboBoxItem>20</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="comboBoxWeektime" FontSize="30" Foreground="black" HorizontalAlignment="Left" Margin="465,362,0,0" VerticalAlignment="Top" Width="351" Height="50">
+                    <ComboBoxItem FontSize="30" Foreground="black">Sunday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Monday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Tuesday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Wednesday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Thursday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Friday</ComboBoxItem>
+                    <ComboBoxItem FontSize="30" Foreground="black">Saturday</ComboBoxItem>
+                </ComboBox>
+
+                <RadioButton x:Name="radioBttnSingle" GroupName="Week" Content="Single" FontSize="30" Foreground="White" HorizontalAlignment="Left" Margin="462,439,0,0" VerticalAlignment="Top" Width="120" Checked="radioBttnSingle_Checked"/>
+                <RadioButton x:Name="radioBttnDuel" GroupName="Week" Content="Duel" FontSize="30" Foreground="White" Margin="608,439,0,0" VerticalAlignment="Top" Checked="radioBttnDuel_Checked" HorizontalAlignment="Left" Width="120"/>
+                <RadioButton x:Name="radioBttnBoth" GroupName="Week" Content="Both" FontSize="30" Foreground="White" HorizontalAlignment="Left" Margin="725,439,0,0" VerticalAlignment="Top" Width="120" Checked="radioBttnBoth_Checked"/>
+                <Button x:Name="bttnAdd" Content="Add" FontSize="30" Foreground="White" HorizontalAlignment="Left" Margin="205,540,0,0" VerticalAlignment="Top" Height="66" Width="150" Click="bttnAdd_Click"/>
+                <Button x:Name="bttnReset" Content="Reset" FontSize="30" Foreground="White" HorizontalAlignment="Left" Margin="462,540,0,0" VerticalAlignment="Top" Height="66" Width="150" Click="bttnReset_Click"/>
+
+
+
+
+            </Grid>
+
+
+
+
+            <AppBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF8243B6" >
+                <Button x:Name="bttnBack" Content="Back"  FontSize="30" Click="bttnBack_Click"/>
+            </AppBar>
+
+        </Grid>
+    </Viewbox>
+
+
+</Page>

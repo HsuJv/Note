@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/background_1"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <FrameLayout
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/search_et_input"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:drawableLeft="@drawable/search_icon"
+                android:drawablePadding="5dp"
+                android:hint="@string/query_search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:background="@null"/>
+
+            <ImageView
+                android:id="@+id/search_iv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="0dp"
+                android:src="@drawable/search_view_delete"
+                android:visibility="gone"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/search_lv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+    </ListView>
+
+    <Button
+        android:id="@+id/new_search_search_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#11000000"
+        android:text="查询"/>
+
+    <Button
+        android:id="@+id/search_btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#11000000"
+        android:text="返回"/>
+
+    <LinearLayout
+        android:id="@+id/new_search_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>

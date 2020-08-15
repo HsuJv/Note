@@ -1,0 +1,2 @@
+noinst_PROGRAMS=testDPI 
+testDPI_SOURCES=testDPI.c

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+android:baselineAligned="true"
+
+android:layout_width="fill_parent"
+
+android:layout_height="fill_parent">
+
+
+    <ImageButton
+        android:id="@+id/main_new_searching"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/new_search" />
+    <ImageButton
+        android:id="@+id/main_history_searching"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/background_light"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/history_search" />
+</LinearLayout>

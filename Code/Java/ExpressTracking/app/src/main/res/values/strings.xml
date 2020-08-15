@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">快查</string>
+    <string name="query_search">输入单号一键查询</string>
+    <string name="NumString">快递单号: </string>
+    <string name="CompString">快递公司: </string>
+    <string name="TrackingInfoString">物流信息</string>
+    <string name="TrackingString">实时通知</string>
+    <string name="NewSearching">新的查询</string>
+    <string name="HistorySearching">历史查询</string>
+    <string name="DeleteAll">清空记录</string>
+</resources>

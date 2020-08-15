@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.njupt.a4081.expresstracking.MySearchView
+        android:id="@+id/new_search_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.njupt.a4081.expresstracking.MySearchView>
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+﻿<Page
+    x:Class="ClasstableTable.TotalClass"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClasstableTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Viewbox>
+        <Grid x:Name="grd" Width="1600" Height="900" RightTapped="grd_RightTapped">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Picture/渐变背景.png"/>
+            </Grid.Background>
+            <Grid HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="1600" Grid.ColumnSpan="8">
+                <Button x:Name="bttnHomeworknote" Content="Homeworknote" FontSize="20" Foreground="Black" HorizontalAlignment="Left" Margin="-3,-3,0,-3" VerticalAlignment="Top" Height="70" Width="206" Click="bttnHomeworknote_Click"/>
+                <Button x:Name="bttnAdd" Content="Add new course"  FontSize="20" Foreground="Black" HorizontalAlignment="Left" Margin="1396,-3,-3,-3" VerticalAlignment="Top" Height="70" Width="207" Click="bttnAdd_Click"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="504,0,0,0" TextWrapping="Wrap" Text="Class Table" FontSize="50" Foreground="Red" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="563"/>
+            </Grid>
+
+            <TextBlock x:Name="txtBlktime1" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="8:00-8:45" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk1" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="2" TextWrapping="Wrap" Text="1" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="8:50-9:35" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk2" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="3" TextWrapping="Wrap" Text="2" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime3" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="9:50-10:35" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk3" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="4" TextWrapping="Wrap" Text="3" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime4" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="10:40-11:25" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk4" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="5" TextWrapping="Wrap" Text="4" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime5" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="11:30-12:15" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk5" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="6" TextWrapping="Wrap" Text="5" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="200"/>
+            <TextBlock x:Name="txtBlktime6" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="13:45-14:30" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk6" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="7" TextWrapping="Wrap" Text="6" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime7" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="14:35-15:20" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk7" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="8" TextWrapping="Wrap" Text="7" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="200"/>
+            <TextBlock x:Name="txtBlktime8" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="15:35-16:20" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk8" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="9" TextWrapping="Wrap" Text="8" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime9" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="16:25-17:10" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk9" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="10" TextWrapping="Wrap" Text="9" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="200"/>
+            <TextBlock x:Name="txtBlktime10" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="18:30-19:25" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk10" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="11" TextWrapping="Wrap" Text="10" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+            <TextBlock x:Name="txtBlktime11" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="19:30-20:25" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk11" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="12" TextWrapping="Wrap" Text="11" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="35" Width="200"/>
+            <TextBlock x:Name="txtBlktime12" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="20:30-21:25" FontSize="26" Foreground="Black"  TextAlignment="Center" VerticalAlignment="Top" Height="30" Width="200"/>
+            <TextBlock x:Name="txtBlk12" HorizontalAlignment="Left" Margin="0,30,0,0" Grid.Row="13" TextWrapping="Wrap" Text="12" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="34" Width="200"/>
+
+            <TextBlock x:Name="txtBlkMon" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Monday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkTues" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Tuesday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkWed" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Wednesday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkThur" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Thursday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkFri" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Friday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkSat" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Saturday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBlock x:Name="txtBlkSun" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" Text="Sunday" FontSize="30" Foreground="Black" TextAlignment="Center" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox4_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox5_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox8_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_1" IsReadOnly="True" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox4_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox5_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox8_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_2" IsReadOnly="True" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox4_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox5_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox8_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_3" IsReadOnly="True" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox4_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox5_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox8_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_4" IsReadOnly="True" Grid.Column="4" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox4_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox5_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox8_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_5" IsReadOnly="True" Grid.Column="5" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox4_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox5_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox8_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_6" IsReadOnly="True" Grid.Column="6" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox1_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="2" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox2_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="3" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox3_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="4" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox4_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="5" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0" Grid.RowSpan="2"/>
+            <TextBox x:Name="txtBox5_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox6_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="7" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox7_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="8" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200" Margin="0,1,0,0"/>
+            <TextBox x:Name="txtBox8_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="9" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox9_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox10_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="11" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+            <TextBox x:Name="txtBox11_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="12" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="65" Width="200"/>
+            <TextBox x:Name="txtBox12_7" IsReadOnly="True" Grid.Column="7" HorizontalAlignment="Left" Grid.Row="13" TextWrapping="Wrap" Text="" FontSize="16" VerticalAlignment="Top" Height="64" Width="200"/>
+
+            <Grid Grid.Row="12" Grid.ColumnSpan="8" Margin="0,35,10,0" Grid.RowSpan="2">
+                <AppBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF8243B6" >
+                    <Button x:Name="bttnBack" Content="Back"  FontSize="30" Click="bttnBack_Click"/>
+                </AppBar>
+            </Grid>
+        </Grid>
+
+
+    </Viewbox>
+</Page>

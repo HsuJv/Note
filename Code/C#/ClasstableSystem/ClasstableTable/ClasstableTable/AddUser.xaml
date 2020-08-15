@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="ClasstableTable.AddUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClasstableTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Viewbox>
+        <Grid x:Name="grd" Width="1600" Height="900">
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Picture/bj2.png"/>
+            </Grid.Background>
+            <Grid HorizontalAlignment="Left" Height="187" VerticalAlignment="Top" Width="1600">
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="0,63,0,0" TextWrapping="Wrap" Text="Now Register Your Own Account!" Foreground="Gold" FontSize="50" TextAlignment="Center" VerticalAlignment="Top" Height="59" Width="1600"/>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="703" VerticalAlignment="Top" Width="918" Margin="328,187,0,0">
+                <TextBlock x:Name="txtBlkUsername" HorizontalAlignment="Left" Margin="29,101,0,542" TextWrapping="Wrap" Text="Please input your username:" FontSize="30"  TextAlignment="Center" Foreground="White" Height="60" Width="421"/>
+                <TextBlock x:Name="txtBlkPassword" HorizontalAlignment="Left" Margin="29,193,0,0" TextWrapping="Wrap" Text="Please input your password:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="60" Width="421"/>
+                <TextBlock x:Name="txtBlkConfirmPassword" HorizontalAlignment="Left" Margin="29,293,0,0" TextWrapping="Wrap" Text="Please comfirm your password:" FontSize="30"  TextAlignment="Center" Foreground="White" VerticalAlignment="Top" Height="60" Width="421"/>
+                <TextBox x:Name="txtBoxUsername" HorizontalAlignment="Left" Margin="479,101,0,0" TextWrapping="Wrap" Text="" FontSize="30"  TextAlignment="Left" Foreground="black" VerticalAlignment="Top" Height="60" Width="395"/>
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="60" Margin="479,193,0,0" FontSize="30"  Foreground="black" VerticalAlignment="Top" Width="395" MaxLength="15"/>
+                <PasswordBox x:Name="passwordBoxComfirm" HorizontalAlignment="Left" Margin="479,293,0,0" FontSize="30" Foreground="black" VerticalAlignment="Top" Height="60" Width="395" MaxLength="15"/>
+                <Button x:Name="bttnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="256,562,0,0" FontSize="30" Foreground="White" VerticalAlignment="Top" Height="59" Width="150" Click="bttnSubmit_Click"/>
+                <Button x:Name="bttnReset" Content="Reset" HorizontalAlignment="Left" Margin="507,562,0,0" FontSize="30" Foreground="White" VerticalAlignment="Top" Height="59" Width="150" Click="bttnReset_Click"/>
+            </Grid>
+            <AppBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF8243B6" >
+                <Button x:Name="bttnBack" Content="Back"  FontSize="30" Click="bttnBack_Click"/>
+
+            </AppBar>
+        </Grid>
+    </Viewbox>
+
+
+</Page>
+

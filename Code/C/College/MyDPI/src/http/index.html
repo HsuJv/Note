@@ -1,0 +1,291 @@
+<!--
+ * index.html
+ * Copyright (C) 2019-2019 by jovi Hsu(jv.hsu@outlook.com)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Realtime data</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+            max-height: 600px;
+            max-width: 900px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .chart {
+            position: relative;
+            margin: 0 auto;
+            width: 900px;
+            height: 600px;
+        }
+
+        .realtime_data {
+            position: relative;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="Chart.bundle.js"></script>
+    <script src="data.js"></script>
+    <script src="myChart.js"></script>
+    <script src="display.js"></script>
+</head>
+
+
+<body>
+
+    <div class="chart" id="div_general"><canvas id="cvs_general" width="900" height="600"></canvas></div>
+    <div class="chart" id="div_details" style="display:none"><canvas id="cvs_details" width="900" height="600"></canvas>
+    </div>
+    <br><br>
+    <div><button id="btn_details" type="button">Details</button></div>
+    <br><br>
+    <div class="realtime_data">
+
+    </div>
+
+
+</body>
+
+<script>
+    var cvs_general = document.getElementById("cvs_general");
+    var ctx_general = cvs_general.getContext("2d");
+
+
+    var cvs_details = document.getElementById("cvs_details");
+    var ctx_details = cvs_details.getContext("2d");
+
+    var data = new Data();
+
+    var general_chart = new MyChart(ctx_general, {
+        type: 'line',
+        data: {
+            labels: [...Array(data.maxHistory)].map((v, i) => (-data.maxHistory + 1 + i ? String(-data.maxHistory + 1 + i) : "Now")),
+            datasets: [{
+                label: 'IP packets',
+                backgroundColor: [...Array(data.maxHistory)].map((v, i) => [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                ][i % 6]),
+                borderColor: [...Array(data.maxHistory)].map((v, i) => [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                ][i % 6]),
+                borderWidth: 2
+            },]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Throughput'
+            },
+            hover: {
+                animationDuration: 0
+            },
+            legend: {
+                position: 'bottom',
+            },
+            responsiveAnimationDuration: 0,
+            responsive: true,
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var label;
+
+                        if (!isNaN(tooltipItem.value) &&
+                            parseInt(tooltipItem.value))
+                            label = "IP: " + tooltipItem.value + " bytes";
+                        else return null;
+
+                        return label;
+                    }
+                }
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    position: 'right',
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Bytes'
+                    },
+                    type: 'logarithmic',
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false,
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time'
+                    },
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false,
+                    }
+                }]
+            }
+        }
+    });
+    var details_chart = new MyChart(ctx_details, {
+        type: 'bar',
+        data: {
+            labels: [...Array(data.maxHistory)].map((v, i) => (-data.maxHistory + 1 + i ? String(-data.maxHistory + 1 + i) : "Now")),
+            datasets: [{
+                //label: 'Details',
+                data: [],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                ],
+                borderWidth: 2
+            },]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Protocols'
+            },
+            hover: {
+                animationDuration: 0
+            },
+            legend: {
+                position: 'bottom',
+            },
+            responsiveAnimationDuration: 0,
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+                position: 'average',
+                callbacks: {
+                    label: function (tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                        if (!isNaN(tooltipItem.value) &&
+                            parseInt(tooltipItem.value))
+                            label += ": " + tooltipItem.value;
+                        else return null;
+
+                        return label;
+                    },
+                    footer: function (tooltipItems, data) {
+                        var sum = 0;
+
+                        tooltipItems.forEach(function (tooltipItem) {
+                            if (!isNaN(tooltipItem.value))
+                                sum += parseInt(tooltipItem.value);
+                        });
+                        return 'Sum: ' + sum;
+                    },
+                    footerFontStyle: 'normal'
+                },
+            },
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Time'
+                    },
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false,
+                    }
+                }],
+                yAxes: [{
+                    stacked: true,
+                    beginAtZero: true,
+                    position: 'right',
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Packets'
+                    },
+                    type: 'logarithmic',
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false,
+                    }
+                }]
+            }
+        }
+    });
+    var disp_general = new Display(general_chart, data, false);
+    var disp_details = new Display(details_chart, data, true);
+    general_chart.init();
+    details_chart.init();
+    data.init();
+    disp_general.start();
+    disp_details.start();
+
+    $("#btn_details").click(function () {
+        if ("Details" === $(this).text()) {
+            $(this).text("General");
+            $("#div_general").hide();
+            $("#div_details").show();
+            //disp_details.show();
+        } else {
+            $(this).text("Details");
+            $("#div_details").hide();
+            $("#div_general").show();
+            //disp_general.show();
+        }
+    })
+    disp_details.show();
+    disp_general.show();
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="ClasstableTable.Admin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClasstableTable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ViewNotesDataTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Username:" FontSize="24"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="0" x:Name="txtNoteTitle" Text="{Binding Usrname}" FontSize="24"></TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="1" Text="Authority:"  FontSize="24"></TextBlock>
+                <TextBlock Grid.Column="1" Grid.Row="1" x:Name="txtNoteDeadline" Text="{Binding Authority}" FontSize="24"></TextBlock>
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+
+
+    <Viewbox>
+
+        <Grid Width="1600" Height="900" >
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Picture/bj2.png"/>
+            </Grid.Background>
+            <Grid >
+                <TextBlock  HorizontalAlignment="Center" FontWeight="Bold" Foreground="White" Margin="127,0,127,835"  TextAlignment="Center" FontSize="48" Text="User Information" VerticalAlignment="Bottom" Width="1346" Height="53" />
+                <ListBox x:Name="lstBoxNotes"  ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="279,97,278,97" Width="809" ItemTemplate="{StaticResource ViewNotesDataTemplate}"/>
+                <TextBlock x:Name="txtBlkNoNoteExists" HorizontalAlignment="Center" Visibility="Collapsed"  VerticalAlignment="Center"  Height="Auto" Width="Auto" Text="No User added!" FontSize="30" Foreground="Purple"   />
+                <AppBar HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="#FF8243B6">
+                    <Grid>
+                        <Grid.RowDefinitions></Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    <Button x:Name="bttnBak"   Grid.Row="0" Grid.Column="0" Content="Back" FontSize="30" FontFamily="Lucida Handwriting" BorderBrush="#FF8243B6" Tapped="bttnBak_Tapped"/>
+                    <Button x:Name="bttnRm"   Grid.Row="0" Grid.Column="1" Content="RemoveAll" FontSize="30" FontFamily="Lucida Handwriting" BorderBrush="#FF8243B6" Tapped="bttnRm_Tapped"/>
+                    </Grid>
+                </AppBar>
+
+            </Grid>
+        </Grid>
+    </Viewbox>
+</Page>

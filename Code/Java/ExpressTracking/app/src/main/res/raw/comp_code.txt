@@ -1,0 +1,17 @@
+顺丰;SF
+百世快递;HTKY
+中通;ZTO
+申通;STO
+圆通;YTO
+韵达;YD
+邮政平邮;YZPY
+EMS;EMS
+天天;HHTT
+京东;JD
+全峰;QFKD
+国通;GTO
+优速;UC
+德邦;DBL
+快捷;FAST
+亚马逊;AMAZON
+宅急送;ZJS

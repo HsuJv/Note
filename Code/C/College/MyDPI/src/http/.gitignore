@@ -1,0 +1,7 @@
+/*
+!.gitignore
+!*.c
+!*.html
+!*.js
+!/cgi/
+!Makefile.am
