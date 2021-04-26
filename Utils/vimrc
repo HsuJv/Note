@@ -1,0 +1,203 @@
+set nu
+"colorscheme solarized
+syntax enable
+autocmd InsertEnter * se cul
+set ruler
+set showcmd
+set novisualbell
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set laststatus=2
+set foldmethod=marker
+"set background=dark
+set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd BufNewFile *.cpp,*.c,*.sh,*.java exec ":call SetTitle()" 
+
+func SetTitle() 
+    if &filetype == 'sh' 
+        call setline(1, "\#!/bin/bash") 
+        call append(line("$"), "") 
+    else 
+        call SetCopyRight()
+        call append(line("$"), "")
+    endif
+    if &filetype == 'cpp'
+        call append(line('$'), "#include <errno.h>")
+        call append(line("$"), "#include <iostream>")
+        call append(line('$'), "#include <stdarg.h>")
+        call append(line("$"), "#include <stdio.h>")
+        call append(line('$'), "#include <stdlib.h>")
+        call append(line('$'), "#include <string.h>")
+        call append(line('$'), "#include <sys/types.h>")
+        call append(line('$'), "#include <unistd.h>")
+        call append(line("$"), "using namespace std;")
+        call append(line("$"), "")
+    endif
+    if &filetype == 'c'
+        call append(line('$'), "#include <errno.h>")
+        call append(line('$'), "#include <stdarg.h>")
+        call append(line("$"), "#include <stdio.h>")
+        call append(line('$'), "#include <stdlib.h>")
+        call append(line('$'), "#include <string.h>")
+        call append(line('$'), "#include <sys/types.h>")
+        call append(line('$'), "#include <unistd.h>")
+        call append(line("$"), "")
+    endif
+    call cursor(getpos('$')[1], 1)
+endfunc
+
+autocmd BufNewFile *.py exec ":call SetPythonTitle()"
+
+func SetPythonTitle()
+    call setline(1, "#!/usr/bin/env python3")
+    call append(line('$'), "\"\"\"")
+    call append(line('$'), "   ".expand("%:t"))
+    call append(line('$'), "   Copyright (C) ".strftime("%Y",localtime())." by jovi Hsu(jv.hsu@outlook.com)")
+    call append(line('$'), "  ")
+    call append(line('$'), "   This program is free software: you can redistribute it and/or modify")
+    call append(line('$'), "   it under the terms of the GNU General Public License as published by")
+    call append(line('$'), "   the Free Software Foundation, either version 3 of the License, or")
+    call append(line('$'), "   (at your option) any later version.")
+    call append(line('$'), "  ")
+    call append(line('$'), "   This program is distributed in the hope that it will be useful,")
+    call append(line('$'), "   but WITHOUT ANY WARRANTY; without even the implied warranty of")
+    call append(line('$'), "   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the")
+    call append(line('$'), "   GNU General Public License for more details.")
+    call append(line('$'), "  ")
+    call append(line('$'), "   You should have received a copy of the GNU General Public License")
+    call append(line('$'), "   along with this program.  If not, see <https://www.gnu.org/licenses/>.")
+    call append(line('$'), "  ")
+    call append(line('$'), "\"\"\"")
+    call append(line("$"), "")
+    call cursor(getpos('$')[1], 1)
+endfunc
+
+autocmd BufNewFile *.h exec ":call SetDotHTitle()"
+
+func SetCopyRight()
+    call setline(1, "/*")
+    call append(line('$'), " * ".expand("%:t"))
+    call append(line('$'), " * Copyright (C) ".strftime("%Y",localtime())." by jovi Hsu(jv.hsu@outlook.com)")
+    call append(line('$'), " *")
+    call append(line('$'), " * This program is free software: you can redistribute it and/or modify")
+    call append(line('$'), " * it under the terms of the GNU General Public License as published by")
+    call append(line('$'), " * the Free Software Foundation, either version 3 of the License, or")
+    call append(line('$'), " * (at your option) any later version.")
+    call append(line('$'), " *")
+    call append(line('$'), " * This program is distributed in the hope that it will be useful,")
+    call append(line('$'), " * but WITHOUT ANY WARRANTY; without even the implied warranty of")
+    call append(line('$'), " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the")
+    call append(line('$'), " * GNU General Public License for more details.")
+    call append(line('$'), " *")
+    call append(line('$'), " * You should have received a copy of the GNU General Public License")
+    call append(line('$'), " * along with this program.  If not, see <https://www.gnu.org/licenses/>.")
+    call append(line('$'), " *")
+    call append(line('$'), " */")
+endfunc
+
+func SetDotHTitle()
+    call SetCopyRight()
+    call append(line("$"), "")
+    call append(line("$"), "#ifndef _".toupper(expand("%:t:r"))."_INCLUDED")
+    call append(line("$"), "#define _".toupper(expand("%:t:r"))."_INCLUDED")
+    call append(line("$"), "")
+    call append(line("$"), "")
+    call append(line("$"), "")
+    call append(line("$"), "#endif /* _".toupper(expand("%:t:r"))."_INCLUDED */")
+    call cursor(getpos('$')[1] - 2, 1)
+endfunc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set autoread
+set clipboard+=unnamed 
+set nobackup
+set foldcolumn=0
+set foldlevel=3 
+set noeb
+set confirm
+set autoindent
+set cindent
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+"set expandtab
+set smarttab
+set history=1000
+set noswapfile
+set ignorecase
+set hlsearch
+set incsearch
+filetype on
+filetype indent on
+set viminfo+=!
+set iskeyword+=_,$,@,%,#,-
+set linespace=0
+set wildmenu
+set backspace=2
+set whichwrap+=<,>,h,l
+set report=0
+set fillchars=vert:\ ,stl:\ ,stlnc:\
+set showmatch
+set matchtime=1
+set scrolloff=3
+
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap { {}<ESC>i
+:inoremap } <c-r>=ClosePair('}')<CR>
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+:inoremap " ""<ESC>i
+:inoremap ' ''<ESC>i
+
+function! ClosePair(char)
+    if getline('.')[col('.') - 1] == a:char
+        return "\<Right>"
+    else
+        return a:char
+    endif
+endfunction
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Auto_Open=1 
+let Tlist_Ctags_Cmd = '/usr/bin/ctags' 
+let Tlist_Sort_Type = "name" 
+let Tlist_Use_Right_Window = 1  
+let Tlist_Compart_Format = 1   
+let Tlist_Exist_OnlyWindow = 1 
+let Tlist_File_Fold_Auto_Close = 0 
+let Tlist_Enable_Fold_Column = 0  
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Show_One_File=1
+"Gtags
+"let $GTAGSCONF='/usr/local/share/gtags/gtags.conf'
+set cscopetag
+set cscopeprg='gtags-cscope'
+
+let GtagsCscope_Auto_Load = 1
+let CtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+
+let gtags_file=findfile("GTAGS",";")
+if !empty(gtags_file)
+    exe "cs add" gtags_file
+endif
+
+map <C-p> : cp<CR>
+map <C-n> : cn<CR>
+map <C-v> : cclose<CR>
+map <C-r>  : Gtags -r<CR><LF>
