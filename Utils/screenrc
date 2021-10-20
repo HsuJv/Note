@@ -122,6 +122,10 @@ bind 'I' login on
 bind 'O' login off
 bind 'D' detach
 bind '}' history
+bindkey -k F2 command # F12 as an alternative of C-a
+bind \033 copy # Esc in copy mode
+bindkey "^k" eval "copy" "stuff ^U" # C-k to page up
+bindkey "^j" eval "copy" "stuff ^D" # C-j to page down
 
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
